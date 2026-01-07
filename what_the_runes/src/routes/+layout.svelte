@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-    <title>Rexdy's First Svelte App</title>
+    <title>Rexdy</title>
 </svelte:head>
 
 {@render children()}

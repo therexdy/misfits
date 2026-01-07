@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod_name
+spec:
+  containers:
+    - name: container_name
+      image: docker.io/library/image:tag
+      env:
+        - name: VAR
+          value: value
+      volumeMounts:
+        - name: name_of_mount
+          mountPath: container_path
+      hostname: container_hostname
+
+  volumes:
+    - name: name_of_mount
+      hostPath:
+        path: host_path
+        type: DirectoryOrCreate # FileOrCreate, File, Directory
